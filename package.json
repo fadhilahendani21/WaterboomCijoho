@@ -1,0 +1,12 @@
+{
+  "name": "waterboom-cijoho",
+  "version": "1.0.0",
+  "description": "Website Waterboom Cijoho - Sensasi Seru Tanpa Batas",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

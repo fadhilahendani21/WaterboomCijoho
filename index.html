@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id" style="color-scheme: light;">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light only" />
+<title>Waterboom Cijoho - Sensasi Seru Tanpa Batas</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+
+<script src="https://unpkg.com/lucide@0.454.0"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-slate-800">
+
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-colors duration-300">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+    <img src="assets/images/logo-waterboom-cijoho.png"
+         alt="Logo Waterboom Cijoho"
+         class="h-12 w-auto object-contain" />
+
+    <span class="font-extrabold leading-tight mt-3">
+        <span class="text-navy text-sm">WATERBOOM</span><br />
+        <span class="text-sky-400 text-xl font-bold block">CIJOHO</span>
+    </span>
+</a>
+
+      <!-- Menu -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <li><a href="#beranda" class="nav-link text-navy font-semibold border-b-2 border-lime pb-1" data-section="beranda">Beranda</a></li>
+        <li><a href="#wahana" class="nav-link hover:text-navy transition pb-1 border-b-2 border-transparent" data-section="wahana">Wahana</a></li>
+        <li><a href="#galeri" class="nav-link hover:text-navy transition pb-1 border-b-2 border-transparent" data-section="galeri">Galeri</a></li>
+        <li><a href="#berita" class="nav-link hover:text-navy transition pb-1 border-b-2 border-transparent" data-section="berita">Berita</a></li>
+        <li><a href="#fasilitas" class="nav-link hover:text-navy transition pb-1 border-b-2 border-transparent" data-section="fasilitas">Fasilitas</a></li>
+        <li><a href="#tentang" class="nav-link hover:text-navy transition pb-1 border-b-2 border-transparent" data-section="tentang">Tentang Kami</a></li>
+        <li><a href="#kontak" class="nav-link hover:text-navy transition pb-1 border-b-2 border-transparent" data-section="kontak">Kontak</a></li>
+      </ul>
+
+      <button class="flex items-center gap-2 bg-navy hover:bg-navy-light text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition uppercase">
+        <i data-lucide="ticket" class="w-4 h-4"></i>
+        Pesan Tiket
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="beranda" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2">
+
+      <div class="relative z-10 px-6 pt-28 pb-14 self-center">
+        <p class="text-lime-dark font-semibold text-sm tracking-wide mb-3">SELAMAT DATANG DI WATERBOOM CIJOHO</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-5">
+          SENSASI SERU<br />
+          <span class="text-lime-dark">TANPA BATAS</span><br />
+          DIMULAI DI SINI!
+        </h1>
+        <p class="text-slate-500 mb-8 leading-relaxed max-w-md">
+          Nikmati momen liburan bersama keluarga di kolam renang yang nyaman dan
+          menyenangkan. Wahana seru untuk semua usia, bersantai, dan berpetualang!
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="flex items-center gap-2 bg-lime hover:bg-lime-dark text-white font-semibold pl-6 pr-2.5 py-2.5 rounded-lg transition uppercase">
+            Beli Tiket
+            <span class="w-7 h-7 rounded-full bg-navy flex items-center justify-center">
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-white"></i>
+            </span>
+          </button>
+          <button class="border-2 border-navy text-navy font-semibold px-6 py-3 rounded-lg hover:bg-navy hover:text-white transition uppercase">
+            Tentang Kami
+          </button>
+        </div>
+      </div>
+
+      <!-- kolom kanan: stretch ngikutin tinggi row, gambar nembus dari paling atas halaman (belakang navbar) sampai bawah -->
+      <div class="hidden md:block relative">
+        <!-- ditarik lebih ke kiri (left negatif) biar gak polos, dan "bocor" ke kanan sampai pinggir layar -->
+        <div class="absolute inset-y-0 left-[-3rem] lg:left-[-5rem] mr-[calc(50%-50vw)] right-[calc(50%-50vw)]">
+          <img src="assets/images/kolam-renang-waterboom-cijoho.jpg" alt="Kolam renang Waterboom Cijoho" class="w-full h-full object-cover" />
+          <!-- overlay gradient dibikin lebih halus & lebar, banyak stop biar transisinya nyatu mulus tanpa garis -->
+          <div class="absolute inset-0 bg-gradient-to-r from-white from-0% via-white/70 via-15% to-transparent to-40% pointer-events-none"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:hidden -mt-2 mb-6 px-0">
+      <img src="assets/images/kolam-renang-waterboom-cijoho.jpg" alt="Kolam renang Waterboom Cijoho" class="w-full h-64 object-cover" />
+    </div>
+  </section>
+
+  <!-- ============ FITUR / WAHANA STRIP ============ -->
+  <section id="wahana" class="max-w-6xl mx-auto px-6 mt-0 mb-4">
+    <div class="bg-navy rounded-2xl px-8 py-8 grid sm:grid-cols-3 gap-8 shadow-lg">
+
+      <div class="flex items-start gap-4">
+    <div class="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center">
+        <img src="assets/icons/water-slide.png" alt="Water Slides" class="w-16 h-16 object-contain">
+    </div>
+    <div>
+        <h3 class="text-white font-bold mb-1">WATERSLIDES</h3>
+        <p class="text-slate-300 text-sm mb-2">Beragam seluncuran seru untuk semua usia.</p>
+        <a href="#" class="text-lime text-sm font-semibold inline-flex items-center gap-1">
+            Lihat Wahana
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+    </div>
+</div>
+
+      <div class="flex items-start gap-4">
+    <div class="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center">
+        <img src="assets/icons/river-ride.png" alt="River Ride" class="w-16 h-16 object-contain">
+    </div>
+    <div>
+        <h3 class="text-white font-bold mb-1">RIVER RIDES</h3>
+        <p class="text-slate-300 text-sm mb-2">Susuri sungai buatan dengan pemandangan tropis yang menyegarkan.</p>
+        <a href="#" class="text-lime text-sm font-semibold inline-flex items-center gap-1">
+            Lihat Wahana
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+    </div>
+</div>
+
+     <div class="flex items-start gap-4">
+    <div class="w-12 h-12 shrink-0 rounded-full bg-white flex items-center justify-center">
+        <img src="assets/icons/swimming-pool.png" alt="Swimming Pool" class="w-16 h-16 object-contain">
+    </div>
+    <div>
+        <h3 class="text-white font-bold mb-1">POOLS</h3>
+        <p class="text-slate-300 text-sm mb-2">Kolam luas dan bersih untuk bersantai bersama keluarga.</p>
+        <a href="#" class="text-lime text-sm font-semibold inline-flex items-center gap-1">
+            Lihat Wahana
+            <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+    </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ============ TENTANG KAMI ============ -->
+  <section id="tentang" class="max-w-7xl mx-auto px-6 pt-1 pb-4 grid md:grid-cols-2 gap-12 items-center">
+
+    <div class="relative">
+      <img src="assets/images/tentang-waterboom-cijoho.jpg" alt="Tentang Waterboom Cijoho" class="rounded-3xl w-full h-[420px] object-cover shadow-lg" />
+      <div class="absolute -bottom-6 -left-6 bg-lime text-navy rounded-2xl px-6 py-4 text-center shadow-lg">
+        <p class="text-3xl font-extrabold leading-none">12+</p>
+        <p class="text-xs font-semibold tracking-wide mt-1">TAHUN<br/>PENGALAMAN</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-sky-400 font-semibold text-sm tracking-wide mb-3">TENTANG WATERBOOM CIJOHO</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-navy leading-tight mb-5">
+        LEPASKAN PENAT,<br /> NIKMATI <span class="text-lime-dark">HARIMU.</span>
+      </h2>
+      <p class="text-navy mb-8 leading-relaxed">
+        Kami menyediakan pengalaman luar biasa sekaligus petualangan yang aman
+        untuk seluruh keluarga. Aktivitas aktif maupun santai tersedia, dengan
+        staf profesional menjaga setiap wahana.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6 mb-8">
+        <div class="flex items-start gap-3">
+          <i data-lucide="shield-check" class="text-lime-dark w-6 h-6 shrink-0"></i>
+          <p class="text-sm font-medium text-navy">Safety terjaga di setiap kolam</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="lock" class="text-lime-dark w-6 h-6 shrink-0"></i>
+          <p class="text-sm font-medium text-navy max-w-[180px]">Loker dan toilet nyaman & bersih</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="life-buoy" class="text-lime-dark w-6 h-6 shrink-0"></i>
+          <p class="text-sm font-medium text-navy">Lifeguard profesional dan ramah</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="users" class="text-lime-dark w-6 h-6 shrink-0"></i>
+          <p class="text-sm font-medium text-navy">Tiket grup & paket ulang tahun</p>
+        </div>
+      </div>
+
+      <button class="flex items-center gap-2 bg-lime hover:bg-lime-dark text-navy font-semibold px-6 py-3 rounded-lg transition uppercase">
+        Layanan Kami <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ DAFTAR TIKET ============ -->
+  <section id="fasilitas" class="bg-slate-50 pt-2 pb-4">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-4">
+        <p class="text-sky-400 font-semibold text-sm tracking-wide mb-2">PEMBELIAN ONLINE</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-navy">DAFTAR TIKET</h2>
+      </div>
+
+      <div class="grid grid-cols-5 gap-3 md:gap-5 overflow-x-auto">
+
+        <!-- Tiket Reguler -->
+        <div class="bg-white rounded-2xl p-3 md:p-6 text-center shadow-lg border border-slate-100 min-w-[130px]">
+    <div class="w-14 h-14 mx-auto rounded-full bg-blue-50 flex items-center justify-center mb-4">
+        <img src="assets/icons/regular-ticket.png" alt="Regular Ticket" class="w-16 h-16 object-contain">
+    </div>
+    <p class="text-xs font-semibold text-slate-500 mb-1">TIKET REGULER</p>
+    <p class="text-xl font-extrabold text-navy mb-4">Rp 20.000</p>
+    <button class="w-full flex items-center justify-center gap-2 bg-navy text-white text-sm font-semibold py-2.5 rounded-lg uppercase">
+        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Tiket
+    </button>
+</div>
+
+        <!-- Sewa Ban -->
+        <div class="bg-white rounded-2xl p-3 md:p-6 text-center shadow-lg border border-slate-100 min-w-[130px]">
+    <div class="w-14 h-14 mx-auto rounded-full bg-lime/10 flex items-center justify-center mb-4">
+        <img src="assets/icons/tube-rental.png" alt="Tube Rental" class="w-16 h-16 object-contain">
+    </div>
+    <p class="text-xs font-semibold text-slate-500 mb-1">SEWA BAN</p>
+    <p class="text-xl font-extrabold text-navy mb-4">Rp 5.000</p>
+    <button class="w-full flex items-center justify-center gap-2 bg-lime text-white text-sm font-semibold py-2.5 rounded-lg uppercase">
+        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Tiket
+    </button>
+</div>
+
+        <!-- Sewa Angsa -->
+      <div class="bg-white rounded-2xl p-3 md:p-6 text-center shadow-lg border border-slate-100 min-w-[130px]">
+    <div class="w-14 h-14 mx-auto rounded-full bg-cyan-50 flex items-center justify-center mb-4">
+        <img src="assets/icons/swan-rental.png" alt="Swan Rental" class="w-16 h-16 object-contain">
+    </div>
+    <p class="text-xs font-semibold text-slate-500 mb-1">SEWA ANGSA</p>
+    <p class="text-xl font-extrabold text-navy mb-4">Rp 5.000</p>
+    <button class="w-full flex items-center justify-center gap-2 bg-cyan-600 text-white text-sm font-semibold py-2.5 rounded-lg uppercase">
+        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Tiket
+    </button>
+</div>
+
+        <!-- Sewa Gazebo -->
+        <div class="bg-white rounded-2xl p-3 md:p-6 text-center shadow-lg border border-slate-100 min-w-[130px]">
+    <div class="w-14 h-14 mx-auto rounded-full bg-blue-50 flex items-center justify-center mb-4">
+        <img src="assets/icons/gazebo-rental.png" alt="Gazebo Rental" class="w-16 h-16 object-contain">
+    </div>
+    <p class="text-xs font-semibold text-slate-500 mb-1">SEWA GAZEBO</p>
+    <p class="text-xl font-extrabold text-navy mb-4">Rp 20.000</p>
+    <button class="w-full flex items-center justify-center gap-2 bg-navy text-white text-sm font-semibold py-2.5 rounded-lg uppercase">
+        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Tiket
+    </button>
+</div>
+
+        <!-- Ingin Rombongan -->
+        <div class="bg-white rounded-2xl p-3 md:p-6 text-center shadow-lg border border-slate-100 flex flex-col items-center justify-center min-w-[130px]">
+          <i data-lucide="users" class="text-navy w-7 h-7 mb-2"></i>
+          <p class="text-navy font-bold mb-1">INGIN ROMBONGAN?</p>
+          <p class="text-slate-500 text-xs mb-4">Dapatkan harga spesial untuk grup dan paket.</p>
+          <button class="w-full border-2 border-navy text-navy text-sm font-semibold py-2.5 rounded-lg uppercase hover:bg-navy hover:text-white transition">Hubungi Kami</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="max-w-7xl mx-auto px-6 pt-2 pb-6">
+    <div class="relative bg-navy rounded-2xl overflow-hidden p-10 md:p-12 flex items-center gap-6">
+      <!-- gambar jadi background penuh kartu -->
+      <img src="assets/images/waterboom-cijoho.jpg" alt="Waterboom Cijoho" class="absolute inset-0 w-full h-full object-cover object-[75%_center]" />
+      <!-- overlay gradient navy: pekat di kiri (nutupin biar teks kebaca), makin ke kanan makin transparan nunjukin gambar -->
+      <div class="absolute inset-0 bg-gradient-to-r from-navy from-0% via-navy/90 via-45% to-navy/20 to-100%"></div>
+
+      <!-- konten teks, di atas overlay -->
+      <i data-lucide="quote" class="relative z-10 text-lime w-10 h-10 shrink-0"></i>
+      <div class="relative z-10 max-w-sm">
+        <p class="text-white text-lg md:text-xl italic leading-relaxed mb-3">
+          "Tempatnya bersih, wahananya seru, karyawan ramah, suasana tropis, dan momen tak terlupakan."
+        </p>
+        <p class="text-lime font-semibold text-sm">— Pengunjung Waterboom Cijoho</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERI ============ -->
+  <section id="galeri" class="max-w-7xl mx-auto px-6 pb-4">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl md:text-2xl font-extrabold text-navy flex items-center gap-2">
+        <i data-lucide="camera" class="text-navy w-5 h-5"></i>
+        MOMEN SERU DI WATERBOOM CIJOHO
+      </h2>
+      <a href="#" class="text-navy text-sm font-semibold inline-flex items-center gap-1">Lihat Semua <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+      <img src="assets/images/galeri-1.jpg" class="rounded-xl h-32 w-full object-cover" alt="Galeri 1" />
+      <img src="assets/images/galeri-2.jpg" class="rounded-xl h-32 w-full object-cover" alt="Galeri 2" />
+      <img src="assets/images/galeri-3.jpg" class="rounded-xl h-32 w-full object-cover" alt="Galeri 3" />
+      <img src="assets/images/galeri-4.jpg" class="rounded-xl h-32 w-full object-cover" alt="Galeri 4" />
+      <img src="assets/images/galeri-5.jpg" class="rounded-xl h-32 w-full object-cover" alt="Galeri 5" />
+      <img src="assets/images/galeri-6.jpg" class="rounded-xl h-32 w-full object-cover" alt="Galeri 6" />
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="kontak" class="bg-navy text-slate-300 pt-14 pb-6">
+
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-6 gap-8">
+
+      <div class="md:col-span-2 flex flex-col h-full">
+        <a href="#" class="flex items-center gap-2 mb-4">
+          <img src="assets/images/logo-waterboom-cijoho.png" alt="Logo Waterboom Cijoho" class="h-9 w-auto object-contain -mt-2" />
+          <span class="font-extrabold text-white leading-tight">
+            WATERBOOM<br />CIJOHO
+          </span>
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed mb-5">
+          Sensasi seru tanpa batas untuk seluruh keluarga. Wahana permainan air, suasana tropis, dan momen tak terlupakan.
+        </p>
+        <div class="flex gap-3 mt-auto">
+          <!-- Instagram -->
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-lime transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-lime transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-lime transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16.5 2h-3v13.5a2.5 2.5 0 1 1-2.5-2.5c.17 0 .34.02.5.05V9.98a5.53 5.53 0 0 0-.5-.02A5.5 5.5 0 1 0 16.5 15V8.5c1.03.75 2.3 1.19 3.67 1.19V6.68c-1.94 0-3.5-1.56-3.67-3.47V2z"></path>
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-lime transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="md:pl-6 md:border-l border-white/10">
+        <h4 class="text-white font-semibold mb-4 text-sm">MENU UTAMA</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-lime transition">Beranda</a></li>
+          <li><a href="#" class="hover:text-lime transition">Wahana</a></li>
+          <li><a href="#" class="hover:text-lime transition">Galeri</a></li>
+          <li><a href="#" class="hover:text-lime transition">Berita</a></li>
+        </ul>
+      </div>
+
+      <div class="md:pl-6 md:border-l border-white/10">
+        <h4 class="text-white font-semibold mb-4 text-sm">LAYANAN</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-lime transition">Daftar Tiket</a></li>
+          <li><a href="#" class="hover:text-lime transition">Pesan Tiket Online</a></li>
+          <li><a href="#" class="hover:text-lime transition">Paket Rombongan</a></li>
+          <li><a href="#" class="hover:text-lime transition">Paket Ulang Tahun</a></li>
+        </ul>
+      </div>
+
+      <div class="md:pl-6 md:border-l border-white/10">
+        <h4 class="text-white font-semibold mb-4 text-sm">INFORMASI</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-lime transition">Berita & Promo</a></li>
+          <li><a href="#" class="hover:text-lime transition">Kontak & Lokasi</a></li>
+          <li><a href="#" class="hover:text-lime transition">Jam Operasional</a></li>
+        </ul>
+      </div>
+
+      <div class="md:pl-6 md:border-l border-white/10">
+        <h4 class="text-white font-semibold mb-4 text-sm">KETENTUAN</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-lime transition">Syarat & Ketentuan</a></li>
+          <li><a href="#" class="hover:text-lime transition">Peraturan Pengunjung</a></li>
+          <li><a href="#" class="hover:text-lime transition">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/10 grid md:grid-cols-6 gap-8 items-center text-xs text-slate-400">
+      <div class="md:col-span-2"></div>
+      <p class="md:col-span-2">© 2026 Waterboom Cijoho. All rights reserved.</p>
+      <p class="md:col-span-2 flex items-center gap-1 md:justify-end"><i data-lucide="map-pin" class="w-3 h-3"></i> Cijoho, Kec. Pamijahan, Kab. Tasikmalaya</p>
+    </div>
+  </footer>
+
+<!-- Daun kiri bawah -->
+<img
+    src="assets/images/leaf-monstera.png"
+    alt="Leaf Decoration"
+    class="fixed left-0 bottom-0 w-52 opacity-15 -rotate-12 pointer-events-none -z-10">
+
+<!-- Daun kanan atas -->
+<img
+    src="assets/images/leaf-monstera.png"
+    alt="Leaf Decoration"
+    class="fixed right-0 top-24 w-52 rotate-180 opacity-15 pointer-events-none -z-10">
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
